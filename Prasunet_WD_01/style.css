@@ -404,4 +404,45 @@ header nav ul li:hover{
     animation-play-state: paused;
 }
 
+@media screen and (max-width : 1023px){
+    :root{
+        --calculate : 1;
+        --w-image : 400px;
+    }
+    .carousel .list .item .main-content .content h2{
+        font-size: 3em;
+    }
+}
 
+@media screen and (max-width: 767px){
+    .carousel .list .item.image{
+        width: 100%;
+        left: 0;
+        justify-content: center;
+    }
+    .carousel .list .item .image figcaption{
+        color: #fff;
+        width: 100%;
+        text-align: center;
+    }
+    .carousel .list .item .main-content .content{
+        display: none;
+    }
+    .arrows{
+        left: 50%;
+        justify-content: center;
+    }
+
+    .section .categories .variety{
+        display: flex;
+        flex-direction: row;
+        overflow-y: auto;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .section{
+        height: 100%;
+    }
+   
+}
