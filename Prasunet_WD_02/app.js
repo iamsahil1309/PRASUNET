@@ -4,7 +4,6 @@ let startTime = 0
 let elapsedTime = 0
 let isRunning = false
 
-
 function start() {
     if(!isRunning){
         startTime = Date.now() - elapsedTime;
@@ -26,7 +25,6 @@ function update() {
     minutes = String(minutes).padStart(2, "0")
     seconds = String(seconds).padStart(2, "0")
     milliseconds = String(milliseconds).padStart(2, "0")
-
 
     display.textContent = `${hour}:${minutes}:${seconds}:${milliseconds}`
 }
