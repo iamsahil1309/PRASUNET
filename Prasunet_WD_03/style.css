@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+body{
+    background: linear-gradient(135deg, #8052ec, #d161ff);
+    height: 100vh;
+    font-family: "Poetsen One", sans-serif;
+    overflow: hidden;
+}
+
+.container span{
+    position: fixed;
+    color: #d161ff;
+    text-shadow: 0 0 25px aliceblue,
+                    0 0 50px #d161ff,   
+                    0 0 100px #8052ec,
+                    0 0 150px #d161ff;
+    animation: animate 10s linear infinite;
+    font-size: 100px;
+    font-family: "Poetsen One", sans-serif;
+    z-index: -1;
+    bottom: -120px;       
+}
+
+.container span:nth-child(1){
+    left: 60px;
+    animation-delay: 0.6s;
+}
+
+.container span:nth-child(2){
+    left: 10%;
+    animation-delay: 3s;
+}
+
+.container span:nth-child(3){
+    left: 20%;
+    animation-delay: 2s;
+}
+
+.container span:nth-child(4){
+    left: 30%;
+    animation-delay: 5s;
+}
+
+.container span:nth-child(5){
+    left: 40%;
+    animation-delay: 1s;
+}
+
+.container span:nth-child(6){
+    left: 50%;
+    animation-delay: 7s;
+}
+
+.container span:nth-child(7){
+    left: 60%;
+    animation-delay: 6s;
+}
+
+.container span:nth-child(8){
+    left: 70%;
+    animation-delay: 8s;
+}
+
+.container span:nth-child(9){
+    left: 80%;
+    animation-delay: 6s;
+}
+
+.container span:nth-child(10){
+    left: 90%;
+    animation-delay: 4s;
+}
+
+@keyframes animate {
+    0%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    70%{
+        opacity: 0.8;
+    }
+    100%{
+        transform: translateY(-800px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.wrapper{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.wrapper h1{
+    color: #fff;
+    letter-spacing: 2px;
+    text-align: center;
+    font-size: 3em;
+}
+
+.wrapper .game{
+    width: 70vmin;
+    height: 70vmin;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vmin;
+}
+
+.wrapper .game .box{
+    background-color: #fff;
+    height: 22vmin;
+    width: 22vmin;
+    border: none;
+    border-radius: 8px;
+    font-family: "Poetsen One", sans-serif;
+    font-size: 12vmin;
+    color: #d161ff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .1);
+    transition: .2s ease;
+}
+
+button{
+    cursor: pointer;
+}
+
+#restart{
+    margin-top: 1.5em;
+    font-size: 1.3em;
+    padding: 1em;
+    border-radius: 8px;
+    border: none;
+    background-color: #0a0027;
+    color: #fff;
+    display: block;
+    position: relative;
+    margin: 1.5em auto 0 auto;
+}
+
+.popup{
+    background: linear-gradient(135deg, #8052ec, #d161ff);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+    font-size: 12vmin;
+    animation: popup .5s linear ;
+}
+
+@keyframes popup {
+    0%{
+        transform: translateY(-100%);
+        opacity: 0.5;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#newGame{
+    font-size: 0.6em;
+    padding: 0.5em 1em;
+    background-color: #0a0027;
+    color: #fff;
+    border-radius: 0.2em;
+    border: none;
+}
+
+#message{
+    color: #fff;
+    text-align: center;
+    font-size: 1em;
+}
+
+.popup.hide{
+    display: none;
+}
+
