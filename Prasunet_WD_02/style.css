@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: oswald;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50vw;
+    height: 500px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container h1{
+    font-size: 100px;
+    text-transform: uppercase;
+    letter-spacing: .3em;
+}
+
+.container #display{
+    font-size: 80px;
+}
+
+.container #controlls{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container button{
+    margin: 15px 15px;
+    height: 50px;
+    width: 90px;
+    font-size: 1.4em;
+    border: none;
+    border-radius: 10px;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.container #start:hover{
+    background-color: green;
+}
+
+.container #stop:hover{
+    background-color: red;
+}
+
+.container #reset:hover{
+    background-color: #4834DF;
+}
+
+
+.box ul li{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    list-style: none;
+    opacity: 0;
+    background: radial-gradient(deepskyblue,transparent, transparent);
+    bottom: 0;
+    left: 10vw;
+    animation: animate 10s linear infinite;
+}
+
+.box ul li:nth-child(2){
+    left: 37vw;
+    animation-delay: 2s;
+}
+
+.box ul li:nth-child(3){
+    left: 25vw;
+    animation-delay: 4s;
+}
+
+.box ul li:nth-child(4){
+    left: 60vw;
+    animation-delay: 6s;
+}
+
+.box ul li:nth-child(5){
+    left: 75vw;
+    animation-delay: 4s;
+}
+
+@keyframes animate {
+    0%{
+        transform: scale(0);
+        opacity: 1;
+        bottom: 0;
+    }
+    100%{
+        transform: scale(10);
+        opacity: 0;
+        bottom: 100vh;
+    }
+}
+
+@media screen and (max-width:768px){
+    .container{
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .container h1{
+        font-size: 2.8em;
+    }
+
+    .container #display{
+        font-size: 55px;
+    }
+
+    .container button{
+        height: 50px;
+        width: 80px;
+    }
+}
+
+@media screen and (max-width:1280px){
+    .container{
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .container h1{
+        font-size: 2.8em;
+    }
+
+    .container #display{
+        font-size: 55px;
+    }
+
+    .container button{
+        height: 50px;
+        width: 80px;
+    }
+}
